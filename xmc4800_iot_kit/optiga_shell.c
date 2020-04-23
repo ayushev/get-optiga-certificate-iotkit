@@ -36,6 +36,7 @@
 #include "optiga/pal/pal_os_timer.h"
 #include "optiga_example.h"
 #include "optiga/pal/pal_logger.h"
+#include "print_optiga_certificate.h"
 
 #define OPTIGA_SHELL		"optiga --"
 #define OPTIGA_SHELL_MODULE "[optiga shell]  : "
@@ -115,12 +116,14 @@ static void optiga_shell_init()
 			break;
 		}
 
+		/*
 		OPTIGA_SHELL_LOG_MESSAGE("Initializing OPTIGA completed...\n\n");
 		OPTIGA_SHELL_LOG_MESSAGE("Begin pairing of host and OPTIGA...");
 		// Usercase: Generate the pre-shared secret on host and write it to OPTIGA
 		example_pair_host_and_optiga_using_pre_shared_secret();
 		OPTIGA_SHELL_LOG_MESSAGE("Pairing of host and OPTIGA completed...");
 		// Usercase: Generate the pre-shared secret on host and write it to OPTIGA
+		 */
         return_status = optiga_util_write_data(me_util,
                                                optiga_oid,
                                                OPTIGA_UTIL_ERASE_AND_WRITE,
@@ -137,8 +140,8 @@ static void optiga_shell_init()
         {
             //Wait until the optiga_util_write_data operation is completed
         }
-        OPTIGA_SHELL_LOG_MESSAGE("Setting current limitation to minimum...");
-        OPTIGA_SHELL_LOG_MESSAGE("Starting OPTIGA example demonstration..\n");
+        //OPTIGA_SHELL_LOG_MESSAGE("Setting current limitation to minimum...");
+        //OPTIGA_SHELL_LOG_MESSAGE("Starting OPTIGA example demonstration..\n");
 	}while(FALSE);
 }
 
@@ -487,9 +490,13 @@ void optiga_shell_begin(void)
 	char_t user_cmd[50];
 	uint8_t index = 0;
 
-	optiga_shell_show_prompt();
-	optiga_shell_show_usage();
-	optiga_shell_show_prompt();
+	//optiga_shell_show_prompt();
+	//optiga_shell_show_usage();
+	//optiga_shell_show_prompt();
+	optiga_shell_init();
+	optiga_print_certificate();
+
+	while(1);
 
 	while(TRUE)
 	{

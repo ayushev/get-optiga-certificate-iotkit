@@ -47,6 +47,16 @@
 			<locationURI>OPTIGA_DAVE_PROJ/xmc4800_iot_kit/optiga_shell.c</locationURI>
 		</link>
 		<link>
+			<name>print_optiga_certificate.c</name>
+			<type>1</type>
+			<locationURI>OPTIGA_DAVE_PROJ/xmc4800_iot_kit/print_optiga_certificate.c</locationURI>
+		</link>
+		<link>
+			<name>print_optiga_certificate.h</name>
+			<type>1</type>
+			<locationURI>OPTIGA_DAVE_PROJ/xmc4800_iot_kit/print_optiga_certificate.h</locationURI>
+		</link>
+		<link>
 			<name>examples/example_optiga_crypt_ecc_generate_keypair.c</name>
 			<type>1</type>
 			<locationURI>OPTIGA_DAVE_PROJ/optiga-trust-m/examples/optiga/example_optiga_crypt_ecc_generate_keypair.c</locationURI>
@@ -250,6 +260,11 @@
 			<name>lib/externals/mbedtls/aes.c</name>
 			<type>1</type>
 			<locationURI>OPTIGA_DAVE_PROJ/optiga-trust-m/externals/mbedtls/library/aes.c</locationURI>
+		</link>
+		<link>
+			<name>lib/externals/mbedtls/base64.c</name>
+			<type>1</type>
+			<locationURI>OPTIGA_DAVE_PROJ/optiga-trust-m/externals/mbedtls/library/base64.c</locationURI>
 		</link>
 		<link>
 			<name>lib/externals/mbedtls/ccm.c</name>
